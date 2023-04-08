@@ -1,0 +1,166 @@
+@import "mix.scss";
+@import "var.scss";
+// Adaptive at the end!!!
+@function rem($value) {
+    $remValue: ($value / 16) + rem;
+    @return $remValue;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: rem(15);
+}
+
+html {
+    background-image: url(../img/akva.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    @include flex(center, center) {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: rem(1200);
+}
+
+// TOP
+.header {
+    background-color: $blue;
+    width: 100%;
+    height: rem(110);
+    @include flex(center, center)
+}
+
+.top {
+    @include flex(space-between, center);
+    &-text {
+        display: block;
+        @include fonts(700, 52, 69, $white);
+        &-mini {
+            display: none;
+            @include fonts(700, 24, 58, $white);
+        }
+    }
+}
+
+.icon {
+    &-left {
+        @include flex(center, center);
+    }
+    &-center {
+        @include flex(center, center)
+    }
+    &-right {
+        @include flex(center, center)
+    }
+    &s {
+        margin-top: rem(5);
+        width: rem(95);
+        height: rem(100);
+    }
+}
+
+// PREV
+.prev {
+    margin-top: rem(45);
+    &-right {
+        height: rem(450);
+        width: rem(600);
+        @include flex(space-between, center) {
+            flex-direction: column;
+        }
+    }
+    @include flex(space-around, center)
+}
+
+.Dasha {
+    height: rem(450);
+    width: rem(330);
+    border-radius: rem(35);
+}
+
+.title-age {
+    @include fonts(700, 52, 69, $blue);
+}
+
+.text-age {
+    @include fonts(700, 23, 40, $white);
+    text-align: center;
+    width: 90%;
+}
+
+.block-age {
+    background-color: $blue;
+    height: rem(380);
+    width: 100%;
+    border-radius: rem(35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cong {
+    margin-top: rem(50);
+    @include flex(space-around, center) {
+        flex-direction: column;
+    }
+    &-title {
+        @include fonts(700, 52, 69, $blue);
+        margin-bottom: rem(20);
+    }
+}
+
+.videos {
+    width: 100%;
+    @include flex(space-between, space-between);
+    flex-wrap: wrap;
+}
+
+.block-video {
+    @include flex(space-between, center) {
+        flex-direction: column;
+    }
+    margin-top: rem(20);
+}
+
+.name-video {
+    margin-top: rem(5);
+    @include fonts(700, 20, 30, $blue);
+}
+
+.video {
+    height: rem(140);
+    border-radius: rem(15);
+    width: rem(250);
+    background-color: $blue;
+}
+
+.footer {
+    margin-top: rem(50);
+    background-color: $blue;
+    width: 100%;
+    height: rem(110);
+    @include flex(center, center);
+    &-content {
+        @include flex(center, center);
+        height: 100%
+    }
+    &-text {
+        @include fonts(700, 52, 69, $white);
+    }
+}
+
+@import "media.scss";

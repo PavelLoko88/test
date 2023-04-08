@@ -1,0 +1,84 @@
+@media (max-width: rem(1200)) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: rem(1024)) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: rem(767)) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: rem(530)) {
+  html {
+    font-size: 18px;
+  }
+  .container {
+    width: 100%;
+  }
+  .icons {
+    width: rem(80);
+    height: rem(85);
+  }
+  .top {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .top-text {
+    display: none;
+  }
+  .top-text-mini {
+    display: block;
+  }
+  .prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prev-right {
+    width: rem(330);
+  }
+  .text-age {
+    font-style: normal;
+    font-weight: rem(700);
+    font-size: rem(16);
+    line-height: rem(28);
+    color: #ffffff;
+    text-align: center;
+    width: 95%;
+  }
+  .videos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .title-age {
+    font-size: 49px;
+  }
+  .cong-title {
+    font-size: 49px;
+    text-align: center;
+  }
+}
+@media (max-width: rem(380)) {
+  html {
+    font-size: 16px;
+  }
+  .cong-title {
+    font-size: 45px;
+  }
+}
+@media (max-width: rem(335)) {
+  html {
+    font-size: 14px;
+  }
+}

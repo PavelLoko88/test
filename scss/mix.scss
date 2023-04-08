@@ -1,0 +1,53 @@
+@mixin fonts ($weights, $sizes, $lineHeights, $colors) {
+    font-style: normal;
+    font-weight: rem( $weights);
+    font-size: rem($sizes);
+    line-height: rem($lineHeights);
+    color: $colors;
+    @content;
+}
+
+@mixin flex ($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+}
+
+//MEDIA
+@import"var.scss";
+@mixin desktop() {
+    @media(max-width: $xxl) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media(max-width: $xl) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media(max-width: $mb) {
+        @content;
+    }
+}
+
+@mixin tablet-mini() {
+    @media(max-width: $ms) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media(max-width: $sm) {
+        @content;
+    }
+}
+
+@mixin mobile-mini() {
+    @media(max-width: $ssm) {
+        @content;
+    }
+}
